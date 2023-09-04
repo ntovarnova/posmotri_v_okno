@@ -13,7 +13,7 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
 }
@@ -35,4 +35,71 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+
+img {
+  max-width: 194px;
+  height: 103px;
+}
+
+video {
+  max-width: 711px;
+  height: 386px;
+}
+.page {
+  max-width: 1200px;
+  height: 800px;
+  padding: 133px 30px;
+}
+
+.content {
+  display: flex;
+  gap: 30px;
+}
+
+.result__video-container {
+  max-width: 711px;
+  height: 386px;
+  margin-bottom: 16px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 711px;
+  height: 54px;
+}
+
+.search-form__fieldset {
+  max-width: 225px;
+  height: 54px;
+}
+
+.content__list {
+  overflow: auto;
+  width: 399px;
+  height: 298px;
+}
+
+.content__list-item {
+  display: flex;
+  gap: 30px;
+}
+
+.content__video-card {
+  display: flex;
+  gap: 30px;
+}
+.content__video-card-thumbnail{
+  gap: 30px;
+}
+.content__details {
+  width: 399px;
+  height: 534px;
+}
+
+h1.title {
+  margin-bottom: 26px;
 }
