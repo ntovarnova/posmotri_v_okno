@@ -37,18 +37,9 @@ ol {
   list-style: none;
 }
 
-img {
-  max-width: 194px;
-  height: 103px;
-}
-
-video {
-  max-width: 711px;
-  height: 386px;
-}
 .page {
-  max-width: 1200px;
-  height: 800px;
+  width: 100%;
+  height: 100%;
   padding: 133px 30px;
 }
 
@@ -61,6 +52,15 @@ video {
   max-width: 711px;
   height: 386px;
   margin-bottom: 16px;
+  position: relative;
+}
+.result__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  inset: 0;
 }
 
 .search-form {
@@ -78,28 +78,100 @@ video {
 }
 
 .content__list {
+  position: relative;
   overflow: auto;
-  width: 399px;
+  max-width: 399px;
   height: 298px;
 }
 
 .content__list-item {
   display: flex;
   gap: 30px;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  inset: 0;
+}
+
+.content__card-link {
+  text-decoration: none;
+  color: #fff;
 }
 
 .content__video-card {
   display: flex;
+  justify-content: space-between;
+  width: 398px;
+  height: 107px;
   gap: 30px;
 }
-.content__video-card-thumbnail{
-  gap: 30px;
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
 }
+.content__video-card-description-container {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.content__video-card-title{
+color: #FFF;
+font-family: Oswald;
+font-size: 30px;
+font-style: normal;
+font-weight: 700;
+line-height: 100%; /* 30px */
+text-transform: uppercase;
+}
+.content__video-card-description{
+  line-height: 16.2px; 
+} 
 .content__details {
   width: 399px;
   height: 534px;
 }
 
 h1.title {
-  margin-bottom: 26px;
+  margin-bottom: 18px;
+  color: #fff;
+  font-family: Oswald;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 94%;
+  text-transform: uppercase;
+  z-index: 1;
+  margin: 0 auto;
+}
+
+.content__accent {
+  color: #545050;
+  font-family: Oswald;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 94%; /* 70.5px */
+  text-transform: uppercase;
+}
+
+.search-form__fieldset-title {
+  color: #fff;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 5px;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
