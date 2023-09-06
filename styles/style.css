@@ -38,13 +38,16 @@ ol {
 }
 
 .page {
-  width: 100%;
-  height: 100%;
+  width: 1200px;
+  height: 800px;
   padding: 133px 30px;
 }
 
 .content {
+  max-width: 1140px;
+  height: 534px;
   display: flex;
+  align-items: flex-end;
   gap: 30px;
 }
 
@@ -53,13 +56,12 @@ ol {
   height: 386px;
   margin-bottom: 16px;
   position: relative;
+  object-fit: cover;
 }
 .result__video {
-  width: 100%;
+  max-width: 100%;
   height: 100%;
-  object-fit: cover;
   object-position: center;
-  position: absolute;
   inset: 0;
 }
 
@@ -85,9 +87,6 @@ ol {
 }
 
 .content__list-item {
-  display: flex;
-  gap: 30px;
-  align-items: flex-start;
   margin-bottom: 30px;
   width: 100%;
   object-fit: cover;
@@ -117,24 +116,15 @@ ol {
   object-fit: cover;
 }
 .content__video-card-title{
-color: #FFF;
-font-family: Oswald;
-font-size: 30px;
-font-style: normal;
-font-weight: 700;
-line-height: 100%; /* 30px */
-text-transform: uppercase;
+  
 }
-.content__video-card-description{
-  line-height: 16.2px; 
-} 
 .content__details {
-  width: 399px;
+  max-width: 399px;
   height: 534px;
 }
 
 h1.title {
-  margin-bottom: 18px;
+  margin-bottom: 26px;
   color: #fff;
   font-family: Oswald;
   font-size: 75px;
@@ -142,8 +132,6 @@ h1.title {
   font-weight: 700;
   line-height: 94%;
   text-transform: uppercase;
-  z-index: 1;
-  margin: 0 auto;
 }
 
 .content__accent {
@@ -164,14 +152,4 @@ h1.title {
   font-weight: 400;
   line-height: normal;
   margin-bottom: 5px;
-}
-
-.visually-hidden {
-  position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  white-space: nowrap;
 }
