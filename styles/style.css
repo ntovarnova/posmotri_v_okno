@@ -56,19 +56,19 @@ ol {
   height: 386px;
   margin-bottom: 16px;
   position: relative;
-  object-fit: cover;
 }
 .result__video {
-  max-width: 100%;
+  width: 100%;
   height: 100%;
   object-position: center;
   inset: 0;
+  object-fit: cover;
 }
 
 .search-form {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: flex-end;
   gap: 40px;
   max-width: 711px;
   height: 54px;
@@ -77,6 +77,84 @@ ol {
 .search-form__fieldset {
   max-width: 225px;
   height: 54px;
+}
+
+.search-form__fieldset-title {
+  color: #fff;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 5px;
+}
+
+fieldset {
+  border: none;
+}
+
+.search-form__label {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  cursor: pointer;
+}
+
+label:has(:focus-visible) {
+  outline: 1px solid #fff;
+}
+
+.search-form__textfield {
+  border-top: 1px solid #fff;
+  color: #ffffffb2;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-color: transparent;
+  appearance: none;
+  border-bottom: 1px solid #fff;
+  display: flex;
+  width: 225px;
+  height: 27px;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  align-content: center;
+  gap: 15px;
+}
+
+.search-form__pseudo-checkbox {
+  border: 1px solid #fff;
+  width: 19px;
+  height: 19px;
+  margin-right: 5px;
+}
+
+input[type="checkbox"]:checked + span {
+  width: 15px;
+  height: 15px;
+  background: #fff;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 .content__list {
@@ -94,30 +172,60 @@ ol {
   inset: 0;
 }
 
-.content__card-link {
-  text-decoration: none;
-  color: #fff;
+.content__card-link_current {
+  background: #545050;
 }
 
+.content__card-link {
+  text-decoration: none;
+  display: block;
+  color: #fff;
+  margin: 2px;
+}
+
+.content__card-link:hover {
+  text-decoration-line: underline;
+}
+
+.content__card-link:active {
+  text-decoration-line: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__video-card-title {
+  color: #fff;
+  font-family: Oswald;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 30px */
+  text-transform: uppercase;
+}
 .content__video-card {
   display: flex;
-  justify-content: space-between;
-  width: 398px;
-  height: 107px;
-  gap: 30px;
+  width: 100%;
+  height: 100%;
 }
+
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
+  object-fit: cover;
 }
+
 .content__video-card-description-container {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.content__video-card-title{
-  
-}
+
 .content__details {
   max-width: 399px;
   height: 534px;
@@ -144,12 +252,50 @@ h1.title {
   text-transform: uppercase;
 }
 
-.search-form__fieldset-title {
+.search-form__submit-button {
+  cursor: pointer;
+  display: flex;
+  width: 194px;
+  height: 34px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  background-color: transparent;
   color: #fff;
+  text-align: center;
   font-family: Fira Sans Condensed;
   font-size: 18px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   line-height: normal;
-  margin-bottom: 5px;
+  border: 1px solid #fff;
 }
+
+.more-button {
+  cursor: pointer;
+  display: flex;
+  width: 399px;
+  height: 34px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  text-align: center;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+button:hover {
+  text-decoration: underline;
+}
+button:active {
+  background: #545050;
+}
+
