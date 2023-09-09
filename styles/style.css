@@ -9,7 +9,7 @@ html {
 }
 
 .page {
-  display: inline-flex;
+  display: flex;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -49,6 +49,7 @@ ol {
   align-items: flex-end;
   gap: 30px;
   justify-content: center;
+  margin: auto;
 }
 
 .result__video-container {
@@ -224,12 +225,11 @@ button:focus-visible {
   overflow: auto;
   max-width: 399px;
   height: 298px;
-  /* 
+
   display: flex;
-flex-direction: column;
-justify-content: flex-end;
-align-items: flex-start;
-gap: 30px;*/
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
 }
 
 .content__list-item {
@@ -237,9 +237,6 @@ gap: 30px;*/
   object-fit: cover;
   object-position: center;
   inset: 0;
-}
-li:not(:last-of-type) {
-  margin-bottom: 30px;
 }
 
 .content__card-link_current {
