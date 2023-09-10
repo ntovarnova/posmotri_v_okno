@@ -16,8 +16,9 @@ html {
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
-  height: 800px;
   padding: 133px 30px;
+  display: flex;
+  height: 800px;
 }
 
 h1,
@@ -52,6 +53,7 @@ ol {
   margin-bottom: 16px;
   position: relative;
 }
+
 .result__video {
   width: 100%;
   height: 100%;
@@ -73,6 +75,11 @@ ol {
   max-width: 225px;
   height: 54px;
   border: none;
+
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
 }
 
 .search-form__fieldset-title {
@@ -82,7 +89,6 @@ ol {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-bottom: 5px;
 }
 
 .search-form__label {
@@ -104,7 +110,6 @@ label:has(:focus-visible) {
 
 label:not(.search-form__label-nounder):hover {
   text-decoration: underline;
-  text-underline-offset: 4px;
 }
 
 input::placeholder {
@@ -140,6 +145,15 @@ input::placeholder {
   border-right: none;
 }
 
+.search-form__textfield:active {
+  border: 1px solid #fff;
+}
+
+
+.search-form__textfield:hover {
+  cursor: text;
+}
+
 .search-form__checkbox-list {
   display: flex;
   align-content: center;
@@ -153,6 +167,7 @@ input::placeholder {
   margin-right: 5px;
   position: relative;
 }
+
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
   content: "";
   display: flex;
@@ -160,7 +175,7 @@ input::placeholder {
   height: 15px;
   background: #fff;
   margin-top: 1px;
-  margin-left: 1px; 
+  margin-left: 1px;
   margin-bottom: 1px;
 }
 
@@ -183,16 +198,16 @@ input[type="checkbox"]:focus-visible + span {
   overflow: auto;
   max-width: 399px;
   height: 298px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
 }
 
 .content__list-item {
   width: 100%;
-  object-fit: cover;
-  object-position: center;
   inset: 0;
-}
-li:not(:last-of-type) {
-  margin-bottom: 30px;
 }
 
 .content__card-link_current {
@@ -207,11 +222,11 @@ li:not(:last-of-type) {
 }
 
 .content__card-link:hover {
-  text-decoration-line: underline;
+  text-decoration: underline;
 }
 
 .content__card-link:active {
-  text-decoration-line: none;
+  text-decoration: none;
 }
 
 .content__card-link:focus-visible {
@@ -242,21 +257,24 @@ li:not(:last-of-type) {
   min-width: 194px;
   height: 103px;
   object-fit: cover;
+  object-position: center;
 }
 
 .content__video-card-description-container {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
 .content__details {
   max-width: 399px;
   height: 534px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 26px;
 }
 
 h1.title {
-  margin-bottom: 26px;
   color: #fff;
   font-family: Oswald;
   font-size: 75px;
