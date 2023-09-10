@@ -151,12 +151,17 @@ input::placeholder {
   width: 19px;
   height: 19px;
   margin-right: 5px;
+  position: relative;
 }
-
-input[type="checkbox"]:checked + span{
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
+  content: "";
+  display: flex;
   width: 15px;
   height: 15px;
   background: #fff;
+  margin-top: 1px;
+  margin-left: 1px; 
+  margin-bottom: 1px;
 }
 
 input[type="checkbox"]:focus-visible + span {
@@ -325,4 +330,5 @@ button:focus {
 
 button:focus-visible {
   outline: 1px solid #fff;
+  outline-offset: 1px;
 }
