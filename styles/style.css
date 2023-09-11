@@ -16,10 +16,10 @@ html {
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
-  display: inline-flex;
-  justify-content: center;
+  display: flex;
   align-items: center;
   height: 100%;
+  justify-content: center;
 }
 
 h1,
@@ -49,8 +49,6 @@ ol {
 }
 
 .result__video-container {
-  max-width: 711px;
-  height: 386px;
   margin-bottom: 16px;
   position: relative;
 }
@@ -196,7 +194,6 @@ input[type="checkbox"]:focus-visible + span {
 .content__list {
   position: relative;
   overflow: auto;
-  max-width: 399px;
   height: 298px;
 
   display: flex;
